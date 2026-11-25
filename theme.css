@@ -1,0 +1,174 @@
+/* Theme: the Mateology colour scheme, taken from the logo.
+   Colours drift smoothly as you scroll (story.js updates --amb-a and --amb-b).
+   Loaded last on every page. */
+
+:root {
+  --orange: #f75a2a;
+  --pink: #fc8980;
+  --sun: #fcb50a;
+  --lime: #a3b66a;
+  --teal: #899753;
+  --sky: #6b94b9;
+  --purple: #c47ab5;
+  --ink: #5a3620;
+  --cream: #fbf1e0;
+  /* pastel colours that blend with scroll */
+  --amb-a: #f8ab87;
+  --amb-b: #fcc9bf;
+}
+
+body {
+  color: var(--ink);
+  background-color: var(--cream);
+  background-image:
+    radial-gradient(circle at 8% 10%, var(--amb-a), transparent 46%),
+    radial-gradient(circle at 94% 16%, var(--amb-b), transparent 44%),
+    radial-gradient(circle at 12% 92%, var(--amb-b), transparent 46%),
+    radial-gradient(circle at 90% 86%, var(--amb-a), transparent 46%);
+  background-attachment: fixed;
+}
+
+/* ---------- Menu ---------- */
+header {
+  background: linear-gradient(180deg, rgba(255, 255, 255, 0.72), rgba(255, 255, 255, 0.42));
+  border: 1.5px solid rgba(255, 255, 255, 0.9);
+  box-shadow: 0 12px 34px rgba(90, 54, 32, 0.16), inset 0 1px 0 #fff;
+}
+nav a { color: var(--ink); }
+nav a:hover { background: color-mix(in srgb, var(--orange) 90%, transparent); color: #fff; }
+nav a.active { background: var(--orange); color: #fff; box-shadow: 0 4px 12px color-mix(in srgb, var(--orange) 40%, transparent), inset 0 1px 0 rgba(255, 255, 255, 0.5); }
+
+.brand { border-color: #fff; box-shadow: 0 6px 18px rgba(90, 54, 32, 0.18), inset 0 1px 0 #fff; }
+.brand img, .finale-logo img { mix-blend-mode: normal; }
+.brand, .brand-foot, .finale-logo { background: rgb(251, 241, 224); }
+
+/* ---------- Buttons ---------- */
+.btn {
+  color: #fff;
+  background: linear-gradient(180deg, rgba(255, 255, 255, 0.4), rgba(255, 255, 255, 0) 55%), var(--orange);
+  box-shadow: 0 10px 24px color-mix(in srgb, var(--orange) 40%, transparent), inset 0 1px 0 rgba(255, 255, 255, 0.7);
+}
+.btn:hover { box-shadow: 0 6px 16px color-mix(in srgb, var(--orange) 45%, transparent), inset 0 1px 0 rgba(255, 255, 255, 0.7); }
+.btn:active { box-shadow: 0 2px 6px color-mix(in srgb, var(--orange) 45%, transparent), inset 0 2px 6px rgba(90, 54, 32, 0.25); }
+.near.btn { box-shadow: 0 16px 30px color-mix(in srgb, var(--orange) 50%, transparent), inset 0 1px 0 rgba(255, 255, 255, 0.7); }
+.btn-sun { color: var(--ink); background: linear-gradient(180deg, rgba(255, 255, 255, 0.5), rgba(255, 255, 255, 0) 55%), var(--sun); box-shadow: 0 10px 24px color-mix(in srgb, var(--sun) 45%, transparent), inset 0 1px 0 rgba(255, 255, 255, 0.8); }
+.btn-sun:hover { box-shadow: 0 6px 16px color-mix(in srgb, var(--sun) 50%, transparent), inset 0 1px 0 rgba(255, 255, 255, 0.8); }
+.near.btn-sun { box-shadow: 0 16px 30px color-mix(in srgb, var(--sun) 55%, transparent), inset 0 1px 0 rgba(255, 255, 255, 0.8); }
+button.cal-day.has-full { background: color-mix(in srgb, var(--orange) 86%, transparent); color: #fff; }
+.tag.full { background: color-mix(in srgb, var(--orange) 85%, transparent); color: #fff; }
+
+/* ---------- Opening ---------- */
+.s-hero { color: var(--ink); background: radial-gradient(circle at 82% 14%, rgba(255, 255, 255, 0.6), transparent 42%), linear-gradient(150deg, var(--amb-a), var(--amb-b)); }
+.s-hero::before { background: var(--pink); opacity: 0.7; }
+.s-hero::after { background: var(--sun); opacity: 0.75; }
+.eyebrow { color: var(--ink); background: rgba(255, 255, 255, 0.55); border: 1px solid rgba(255, 255, 255, 0.9); }
+.eyebrow.dark { color: #fff; background: color-mix(in srgb, var(--orange) 90%, transparent); }
+.mega { color: var(--orange); text-shadow: 0 5px 0 rgba(90, 54, 32, 0.13); }
+.mega .w2 { color: var(--sky); }
+.mega .w3 { color: var(--purple); }
+.scroll-cue { color: var(--ink); }
+.scroll-cue .bub { border-color: var(--ink); }
+.scroll-cue .bub::after { background: var(--ink); }
+
+/* ---------- Chapter one ---------- */
+.s-dive, .s-dive[data-step] {
+  color: var(--ink);
+  background-color: transparent;
+  background-image: radial-gradient(circle at 12% 88%, rgba(255, 255, 255, 0.5), transparent 46%), linear-gradient(165deg, var(--amb-a), var(--amb-b));
+  transition: none;
+}
+.dive-text, .s-dive[data-step="2"] .dive-text {
+  background: linear-gradient(145deg, rgba(255, 255, 255, 0.7), rgba(255, 255, 255, 0.38));
+  border: 1.5px solid rgba(255, 255, 255, 0.9);
+  color: var(--ink);
+}
+.dive-text .eyebrow, .s-dive[data-step="2"] .eyebrow { background: rgba(255, 255, 255, 0.7); color: var(--ink); }
+.step h3, .s-dive[data-step="2"] .step h3 { text-shadow: 0 5px 0 rgba(90, 54, 32, 0.12); }
+.step:nth-child(1) h3 { color: var(--orange); }
+.step:nth-child(2) h3 { color: var(--sky); }
+.step:nth-child(3) h3 { color: var(--purple); }
+.ring, .s-dive[data-step="2"] .ring { border-color: rgba(90, 54, 32, 0.28); }
+.orb { border-color: #fff; }
+
+/* ---------- Chapter two / three ---------- */
+.s-path .path-head h2 { color: var(--ink); }
+.trail { stroke: var(--orange); }
+.trail-bg { stroke: rgba(90, 54, 32, 0.16); }
+.s-kits { background-color: transparent; background-image: linear-gradient(180deg, var(--amb-a), var(--amb-b)); }
+.kit-intro h2, .kit-end h3 { color: var(--ink); }
+.swipe { color: var(--orange); }
+
+/* ---------- Finale and footer ---------- */
+.s-finale {
+  color: var(--cream);
+  padding-top: 11rem;
+  background:
+    radial-gradient(circle at 14% 62%, rgba(107, 148, 185, 0.4), transparent 42%),
+    radial-gradient(circle at 88% 78%, color-mix(in srgb, var(--sun) 30%, transparent), transparent 42%),
+    linear-gradient(180deg, var(--amb-b) 0%, #9a6a4c 24%, #5a3620 46%, #3a2314 100%);
+}
+.s-finale .mega { color: var(--cream); text-shadow: 0 5px 0 rgba(0, 0, 0, 0.25); }
+.s-finale .mega .w2 { color: var(--sun); }
+.s-finale .mega .w3 { color: var(--pink); }
+.s-finale .lead { color: var(--cream); }
+footer, .story footer { background: rgba(58, 35, 20, 0.94); color: var(--cream); border-top-color: rgba(255, 255, 255, 0.12); }
+.story footer { background: #3a2314; }
+
+/* ---------- Glass cards read well on pastel ---------- */
+.card, .booking-calendar { color: var(--ink); }
+.cta-band { background: linear-gradient(135deg, rgba(196, 122, 181, 0.75), rgba(252, 137, 128, 0.65)); color: #fff; }
+
+/* ---------- Readability and soft logo edges ---------- */
+main h2, h2 { color: #9a4f8e; }
+.card .price, .price { color: #d4491c; }
+.brand img, .finale-logo img {
+  -webkit-mask-image: linear-gradient(to right, transparent, #000 5%, #000 95%, transparent), linear-gradient(to bottom, transparent, #000 7%, #000 93%, transparent);
+  -webkit-mask-composite: source-in;
+  mask-image: linear-gradient(to right, transparent, #000 5%, #000 95%, transparent), linear-gradient(to bottom, transparent, #000 7%, #000 93%, transparent);
+  mask-composite: intersect;
+}
+#cal-title, #dialog-title, .list-head h3, .done-view h3, #done-view h3 { color: #9a4f8e; }
+.dive-steps { min-height: 16rem; }
+@media (max-width: 800px) { .dive-steps { min-height: 13.5rem; } }
+
+/* ---------- Switches from the admin portal (see site.js) ---------- */
+html[data-fx-balloons="off"] .balloon,
+html[data-fx-clouds="off"] .cloud,
+html[data-fx-cubes="off"] .cube,
+html[data-fx-cursor="off"] .cursor-ring,
+html[data-fx-cursor="off"] .trail-bub { display: none !important; }
+
+.empty { text-align: center; font-weight: 700; padding: 2rem 1rem; }
+
+/* Announcement banner */
+#mps-announce {
+  position: relative;
+  z-index: 60;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.4rem 0.9rem;
+  align-items: center;
+  justify-content: center;
+  padding: 0.55rem 1rem;
+  background: linear-gradient(90deg, var(--orange), var(--pink));
+  color: #fff;
+  font-weight: 800;
+  font-size: 0.95rem;
+  text-align: center;
+}
+#mps-announce a {
+  color: var(--ink);
+  background: rgba(255, 255, 255, 0.9);
+  padding: 0.15rem 0.8rem;
+  border-radius: 999px;
+  text-decoration: none;
+  font-weight: 800;
+}
+
+/* Draft preview ribbon */
+#mps-preview {
+  position: fixed; left: 50%; bottom: 14px; translate: -50% 0; z-index: 200; display: flex; flex-wrap: wrap; gap: 0.3rem 0.8rem; align-items: center; justify-content: center;
+  max-width: 94vw; padding: 0.55rem 1.1rem; border-radius: 999px; background: var(--ink); color: #fff; font-weight: 800; font-size: 0.9rem; text-align: center;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.3);
+}
+#mps-preview a { color: var(--sun); }

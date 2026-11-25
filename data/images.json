@@ -1,0 +1,9 @@
+[
+  { "path": "images/rainbow-rice-hands.jpg", "label": "Rainbow rice" },
+  { "path": "images/pompoms-hands.jpg", "label": "Pom-poms" },
+  { "path": "images/sand-play-hands.jpg", "label": "Sand play" },
+  { "path": "images/pebble-wall-touch.jpg", "label": "Pebble wall" },
+  { "path": "images/bead-threading.jpg", "label": "Bead threading" },
+  { "path": "images/tea-set-mud-play.jpg", "label": "Mud tea set" },
+  { "path": "images/teal-toy-touch.jpg", "label": "Teal toys" }
+]

@@ -1,0 +1,32 @@
+/* Parent account page */
+.acct-main { max-width: 860px; margin: 0 auto; padding-bottom: 3rem; }
+.acct-card { background: rgba(255, 255, 255, 0.7); backdrop-filter: blur(12px); -webkit-backdrop-filter: blur(12px); border: 1.5px solid rgba(255, 255, 255, 0.95); border-radius: 26px; padding: 1.4rem 1.5rem; box-shadow: 0 10px 30px rgba(90, 54, 32, 0.1); margin-bottom: 1rem; }
+.acct-card.narrow { max-width: 440px; margin-inline: auto; }
+.acct-card h3 { margin-top: 0; }
+.acct-tabs { display: flex; flex-wrap: wrap; gap: 0.4rem; margin: 0.8rem 0 1rem; }
+.acct-tabs button { font: inherit; font-weight: 800; cursor: pointer; padding: 0.5rem 1.1rem; min-height: 44px; border-radius: 999px; border: 2px solid rgba(255, 255, 255, 0.9); background: rgba(255, 255, 255, 0.6); color: var(--ink); }
+.acct-tabs button[aria-selected="true"] { background: var(--orange); color: #fff; border-color: var(--orange); }
+.acct-form { display: grid; gap: 0.8rem; }
+.acct-form label { display: grid; gap: 0.25rem; font-weight: 800; }
+.acct-form input[type=text], .acct-form input[type=email], .acct-form input[type=tel], .acct-form input[type=number] { font: inherit; padding: 0.65rem 0.9rem; min-height: 46px; border-radius: 14px; border: 2px solid rgba(90, 54, 32, 0.2); background: rgba(255, 255, 255, 0.95); color: var(--ink); width: 100%; }
+.acct-form .code { font-size: 1.6rem; letter-spacing: 0.3em; text-align: center; }
+.acct-row { display: flex; flex-wrap: wrap; gap: 0.4rem 1rem; align-items: center; justify-content: space-between; padding: 0.8rem 0; border-bottom: 1px dashed rgba(90, 54, 32, 0.18); }
+.acct-row:last-child { border-bottom: 0; }
+.acct-row small { display: block; color: #7b6455; }
+.acct-row .amt { font-weight: 900; font-size: 1.1rem; }
+.acct-tag { display: inline-block; padding: 0.1rem 0.7rem; border-radius: 99px; font-size: 0.8rem; font-weight: 800; background: rgba(90, 54, 32, 0.1); }
+.acct-tag.good { background: #dcefd5; color: #2f6a2c; } .acct-tag.warn { background: #ffe9b8; color: #8a5200; } .acct-tag.bad { background: #fbd9d6; color: #a1231b; }
+.acct-error { color: #b3261e; font-weight: 800; min-height: 1.2em; margin: 0; }
+.acct-ok { color: #2f6a2c; font-weight: 800; }
+.acct-muted { color: #7b6455; }
+.acct-actions { display: flex; flex-wrap: wrap; gap: 0.5rem; }
+.acct-check { display: flex; gap: 0.7rem; align-items: flex-start; font-weight: 700; cursor: pointer; }
+.acct-check input { width: 26px; height: 26px; accent-color: var(--orange); flex: none; margin-top: 0.1rem; }
+.acct-btn { font: inherit; font-weight: 800; cursor: pointer; min-height: 46px; padding: 0.6rem 1.3rem; border-radius: 999px; border: 2px solid rgba(90, 54, 32, 0.2); background: rgba(255, 255, 255, 0.85); color: var(--ink); text-decoration: none; display: inline-flex; align-items: center; }
+.acct-btn.primary { background: var(--orange); border-color: var(--orange); color: #fff; }
+.acct-btn.danger { background: #b3261e; border-color: #b3261e; color: #fff; }
+.acct-btn:disabled { opacity: 0.55; cursor: not-allowed; }
+.acct-demo { background: #fff4d6; border: 1.5px solid #f3d37a; border-radius: 14px; padding: 0.6rem 1rem; margin-bottom: 1rem; font-weight: 700; }
+.acct-note { margin: 0.3rem 0 0; padding: 0.5rem 0.8rem; border-radius: 12px; background: rgba(163, 182, 106, 0.22); }
+.acct-main button:focus-visible, .acct-main input:focus-visible, .acct-main a:focus-visible { outline: 3px solid var(--sky); outline-offset: 2px; }
+@media (max-width: 560px) { .acct-card { padding: 1.1rem; border-radius: 22px; } }
